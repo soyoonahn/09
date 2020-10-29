@@ -5,24 +5,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-int i, average;
-int sum;
+	
+int i;
 int grade[SIZE];
-
-printf("input %i scores\n", SIZE);
-	
-sum=0;
-for(i=0;i<SIZE;i++)
-{
-	scanf("%d", &grade[i]);
-	sum += grade[i];
-}	
+int score[SIZE];
 
 for(i=0;i<SIZE;i++)
-	printf("grade[%d] = %d\n", i, grade[i]);
-	
-average = sum/SIZE;
-printf("average : %i\n", average);
+{ 	
+	grade[i] = rand()%100+1;
+}
+
+for(i=0;i<SIZE;i++)
+	score[i]=grade[i];
+
+for(i=0;i<SIZE;i++)
+	printf("score[%d] %i (%i)\n", i, score[i], grade[i]);
 
 	return 0;
 }
